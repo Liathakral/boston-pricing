@@ -17,8 +17,8 @@ jobs:
         run: echo "Deploying to Render..."
 
       - name: Trigger Render Deployment
-        run: curl -X POST "$RENDER_DEPLOY_HOOK"
+        run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
+
 
     env:
       RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
-#https://api.render.com/deploy/srv-cvij2s8gjchc73cuc9d0?key=oO36RF90Au0
